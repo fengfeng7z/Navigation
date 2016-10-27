@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+    <title>Blank Cordova Mobile App Project Template (Lite)</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        /* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+/*
+        .ui-footer {
+            position: absolute !important;
+            bottom: 0;
+            width: 100%;
+        }
+*/
+    </style>
+
+    <script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
+    <script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+<!--PAGE 1------------->
+<div data-role="page" id="pageone">
+    <div data-role="panel" id="myPanel">
+    <h2>Panel Header</h2>
+    <p>You can close the panel by clicking outside the panel, pressing the Esc key, by swiping, or by clicking the button below:</p><br>
+        <a class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-btn-icon-left" href="#pageone">Go to Page One</a><br>
+        <a class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-btn-icon-left" href="#pagetwo">Go to Page Two</a><br>
+      <a class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-btn-icon-left" href="#pagethree">Go to Page Three</a>
+    <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close panel</a>
+  </div>
+  <div data-role="header">
+    <h1>Welcome To My Homepage</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>Welcome! This is Page One. If you click on the link below, it will take you to Page Two.</p>
+      <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Open Panel</a><hr/>
+    <a href="#pagetwo">Go to Page Two</a>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <a type="button" href="#pagetwo">Go to Page Two</a>
+      <a type="button" href="#pagethree">Go to Page Three</a>
+  </div>
+</div>
+<!--PAGE 2------------->
+<div data-role="page" id="pagetwo">
+    <div data-role="panel"  data-display="overlay" id="overlayPanel" data-position="right">
+    <h2>Panel Header</h2>
+    <p>You can close the panel by clicking outside the panel, pressing the Esc key, by swiping, or by clicking the button below:</p><br>
+        <a class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-btn-icon-left" href="#pageone">Go to Page One</a><br>
+        <a class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-btn-icon-left" href="#pagetwo">Go to Page Two</a><br>
+      <a class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-btn-icon-left" href="#pagethree">Go to Page Three</a>
+    <a href="#pagetwo" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close panel</a>
+  </div>
+  <div data-role="header">
+    <h1>Welcome To My Homepage</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>This is Page Two. If you click on the link below, it will take you to Page One.</p>
+      <a href="#overlayPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Open overlayPanel</a><hr/>
+    <a href="#pagethree">Go to Page Three</a>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+      <a type="button" href="#pageone">Go to Page One</a>
+      <a type="button" href="#pagethree">Go to Page Three</a>
+  </div>
+</div>
+<!--PAGE 3------------->    
+    <div data-role="page" id="pagethree">
+        <div data-role="panel" data-display="reveal" id="revealPanel">
+    <h2>Panel Header</h2>
+    <p>You can close the panel by clicking outside the panel, pressing the Esc key, by swiping, or by clicking the button below:</p><br>
+        <a class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-btn-icon-left" href="#pageone">Go to Page One</a><br>
+        <a class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-btn-icon-left" href="#pagetwo">Go to Page Two</a><br>
+      <a class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-btn-icon-left" href="#pagethree">Go to Page Three</a>
+    <a href="#pagethree" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close panel</a>
+  </div>
+  <div data-role="header">
+    <h1>Welcome To My Homepage</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>This is Page Three. If you click on the link below, it will take you to Page One.</p>
+      <a href="#revealPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Open revealPanel</a><hr/>
+    <a href="#pageone">Go to Page One</a>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <a type="button" href="#pageone">Go to Page One</a>
+      <a type="button" href="#pagetwo">Go to Page Two</a>
+  </div>
+</div>
+
+</body>
+</html>
